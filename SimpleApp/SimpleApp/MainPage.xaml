@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:SimpleApp"
+             xmlns:converter="clr-namespace:SimpleApp.Core.Converter"
+             x:Class="SimpleApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:IntToBoolConverter x:Key="intToBool"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Fill">
+
+        <StackLayout.BindingContext>
+            <app:FooViewModel Name="Leo"/>
+        </StackLayout.BindingContext>
+
+        <Entry x:Name="name" Text="{Binding Name}"/>
+        <Button x:Name="button1"
+                Text="Submit"
+                IsEnabled="{ Binding Source= {x:Reference name}, Path=Text.Length, Converter={x:StaticResource intToBool} }"/>
+    </StackLayout>
+</ContentPage>
