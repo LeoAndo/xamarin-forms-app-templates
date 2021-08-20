@@ -9,7 +9,7 @@ Visual Studio Community 2019 for Mac
 Version 8.10.7 (build 17)
 ```
 
-# Template 1
+# Template 1 (SimpleApp)
 [Code](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp)<br>
 [Features](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp/SimpleApp/Core)<br>
 
