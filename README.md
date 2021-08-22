@@ -11,7 +11,14 @@ Version 8.10.7 (build 17)
 
 # Template 1 (SimpleApp)
 [Code](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp)<br>
-[Features](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp/SimpleApp/Core)<br>
+- Feature
+  - Navigation
+  - ViewModel 
+  - ValueConverter
+
+| ios | android |
+|:---|:---:|
+|<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SimpleApp/capture/ios.gif" width=320 /> |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SimpleApp/capture/android.gif" width=320 /> |
 
 
 # refs
