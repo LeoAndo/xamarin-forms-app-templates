@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:SimpleApp"
              xmlns:converter="clr-namespace:SimpleApp.Core.Converter"
-             x:Class="SimpleApp.MainPage">
+             x:Class="SimpleApp.MainPage"
+             Title="Main">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,9 +20,10 @@
             <app:FooViewModel Name="Leo"/>
         </StackLayout.BindingContext>
 
+        <Switch x:Name="switchShowNavBar" IsToggled="True" />
         <Entry x:Name="name" Text="{Binding Name}"/>
         <Button x:Name="button1"
-                Text="Submit"
-                IsEnabled="{ Binding Source= {x:Reference name}, Path=Text.Length, Converter={x:StaticResource intToBool} }"/>
+                Text="Next Screen"
+                IsEnabled="{ Binding Source= {x:Reference name}, Path=Text.Length, Converter={x:StaticResource intToBool} }" Clicked="button1_Clicked"/>
     </StackLayout>
 </ContentPage>

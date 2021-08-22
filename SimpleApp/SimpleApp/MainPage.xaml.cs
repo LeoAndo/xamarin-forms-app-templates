@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace SimpleApp
 {
@@ -13,6 +7,12 @@ namespace SimpleApp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        void button1_Clicked(System.Object sender, System.EventArgs e)
+        {
+            bool showNavigationBar = switchShowNavBar.IsToggled;
+            Navigation.PushAsync(new SubPage(name.Text.ToString(), showNavigationBar));
         }
     }
 }
