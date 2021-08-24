@@ -11,7 +11,7 @@ Version 8.10.7 (build 17)
 
 # Template 1 (SimpleApp)
 [Code](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp)<br>
-- Feature
+- Features
   - Navigation
   - ViewModel 
   - ValueConverter
