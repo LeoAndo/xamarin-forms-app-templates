@@ -15,6 +15,7 @@ Version 8.10.7 (build 17)
   - Navigation
   - ViewModel 
   - ValueConverter
+  - Material
 
 | ios | android |
 |:---|:---:|
