@@ -4,7 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:SimpleApp"
              x:Class="SimpleApp.SubPage"
-             Title="Sub">
+             Title="Sub"
+             Visual="Material">
 
     <StackLayout
         VerticalOptions="CenterAndExpand"
