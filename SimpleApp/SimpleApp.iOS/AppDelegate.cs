@@ -23,6 +23,7 @@ namespace SimpleApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.Forms.Init(); // マテリアル対応
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

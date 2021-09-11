@@ -4,7 +4,8 @@
              xmlns:app="clr-namespace:SimpleApp"
              xmlns:converter="clr-namespace:SimpleApp.Core.Converter"
              x:Class="SimpleApp.MainPage"
-             Title="Main">
+             Title="Main"
+             Visual="Material">
 
     <ContentPage.Resources>
         <ResourceDictionary>
