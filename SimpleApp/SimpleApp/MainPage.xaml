@@ -24,7 +24,7 @@
         <Switch x:Name="switchShowNavBar" IsToggled="True" />
         <Entry x:Name="name" Text="{Binding Name}"/>
         <Button x:Name="button1"
-                Text="Next Screen"
+                Text="Next Screen1"
                 IsEnabled="{ Binding Source= {x:Reference name}, Path=Text.Length, Converter={x:StaticResource intToBool} }" Clicked="button1_Clicked"/>
     </StackLayout>
 </ContentPage>
