@@ -7,7 +7,7 @@ namespace SimpleApp
 {
     public class FooViewModel
     {
-        // ObservableCollection: 内部でINotifyPropertyChangedを実装している.
+        // ObservableCollection: 内部でINotifyCollectionChangedを実装している.
         public ObservableCollection<Person> Persons { get; private set; }
         public FooViewModel()
         {
