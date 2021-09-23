@@ -30,7 +30,7 @@ Version 8.10.7 (build 17)
 
 | ios | android |
 |:---|:---:|
-|<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/fd4ff80562b734a1da91dc069139ec5383e39e89/PagerSimpleApp/capture/ios.gif" width=320 /> |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/PagerSimpleApp/capture/android.gif" width=320 /> |
+|<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/PagerSimpleApp/capture/ios.gif" width=320 /> |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/PagerSimpleApp/capture/android.gif" width=320 /> |
 
 # refs
 https://github.com/xamarin/xamarin-forms-book-samples<br>
