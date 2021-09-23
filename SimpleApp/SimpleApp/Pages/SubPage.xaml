@@ -2,8 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:SimpleApp"
-             x:Class="SimpleApp.SubPage"
+             xmlns:vm="clr-namespace:SimpleApp.ViewModels"
+             x:Class="SimpleApp.Pages.SubPage"
              Title="Sub"
              Visual="Material">
 
@@ -12,7 +12,7 @@
         HorizontalOptions="Fill">
 
         <StackLayout.BindingContext>
-            <app:FooViewModel Name="Leo"/>
+            <vm:FooViewModel Name="Leo"/>
         </StackLayout.BindingContext>
         <Label x:Name="name" Text="{Binding Name}"/>
     </StackLayout>

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace SimpleApp.Core.Converter
+namespace SimpleApp.Converters
 {
     public class IntToBoolConverter : IValueConverter
     {
