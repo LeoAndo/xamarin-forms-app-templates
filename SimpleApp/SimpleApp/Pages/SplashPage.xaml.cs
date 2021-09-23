@@ -20,7 +20,9 @@ namespace SimpleApp.Pages
         {
             Debug.WriteLine("OnAppearing!!");
             base.OnAppearing();
-            await Task.Delay(10000); // splash表示時間
+            // splash表示時間 (awaitしてる時間)
+            await animationView.ScaleTo(1, 2000); // 2秒間　通常の倍率でViewを表示
+            await animationView.ScaleTo(0, 1000); // 1秒かけて倍率を0にする
 
             //Transition to MainPage
             App.Current.MainPage = new NavigationPage(new MainPage());
