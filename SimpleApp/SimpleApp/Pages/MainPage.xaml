@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:SimpleApp"
-             xmlns:converter="clr-namespace:SimpleApp.Core.Converter"
-             x:Class="SimpleApp.MainPage"
+             xmlns:vm="clr-namespace:SimpleApp.ViewModels"
+             xmlns:converter="clr-namespace:SimpleApp.Converters"
+             x:Class="SimpleApp.Pages.MainPage"
              Title="Main"
              Visual="Material">
 
@@ -18,7 +18,7 @@
         HorizontalOptions="Fill">
 
         <StackLayout.BindingContext>
-            <app:FooViewModel Name="Leo"/>
+            <vm:FooViewModel Name="Leo"/>
         </StackLayout.BindingContext>
 
         <Switch x:Name="switchShowNavBar" IsToggled="True" />

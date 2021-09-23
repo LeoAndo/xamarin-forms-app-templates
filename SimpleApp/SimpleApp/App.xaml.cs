@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using SimpleApp.Pages;
+using Xamarin.Forms;
 
 namespace SimpleApp
 {
@@ -7,7 +8,8 @@ namespace SimpleApp
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            // MainPage = new NavigationPage(new MainPage());
+            MainPage = new SplashPage(); // NavigationPageで囲むとツールバーが出てしまう。
         }
 
         protected override void OnStart()

@@ -1,6 +1,4 @@
-﻿using SimpleApp.Core.ViewModel;
-
-namespace SimpleApp
+﻿namespace SimpleApp.ViewModels
 {
     public class FooViewModel : ViewModelBase
     {
