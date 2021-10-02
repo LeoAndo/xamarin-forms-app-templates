@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:SimpleApp"
+             x:Class="SimpleApp.MainPage"
+             Title="Pager Main"
+             Visual="Material">
+
+    <ContentPage.BindingContext>
+        <app:FooViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="20" HorizontalOptions="Center">
+        <CarouselView ItemsSource="{Binding Persons}"
+                      IndicatorView="indicatorView"
+                      PositionChanged="CarouselView_PositionChanged">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="8">
+                        <StackLayout>
+                            <Label
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                FontSize="Large" />
+                            <Image Source="{Binding ImageSource}"
+                                   Aspect="AspectFit"
+                                   HeightRequest="200"
+                                   WidthRequest="200" />
+                            <Label
+                                Text="{Binding Details}"
+                                FontAttributes="Italic" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                       Margin="0,0,0,40"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="DarkGray" />
+        <Label x:Name="currentPos" FontSize="Body" Text="CurrentPageNo: 1" HorizontalTextAlignment="Center" />
+    </StackLayout>
+</ContentPage>
