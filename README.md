@@ -42,6 +42,7 @@ Version 8.10.7 (build 17)
   - Material Components
   - Lottie Animation
   - IndicatorView With CarouselView
+  - Xamarin.Plugin.SharedTransitions
   - Custom Font (Google Font)
     - https://fonts.google.com/specimen/Reggae+One?subset=japanese
     - https://fonts.google.com/specimen/Ubuntu 
