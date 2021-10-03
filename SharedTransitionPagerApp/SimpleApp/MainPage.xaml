@@ -2,34 +2,51 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:SimpleApp"
+             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
              x:Class="SimpleApp.MainPage"
              Title="Pager Main"
              Visual="Material">
-
-    <ContentPage.BindingContext>
-        <app:FooViewModel />
-    </ContentPage.BindingContext>
     <StackLayout Margin="20" HorizontalOptions="Center">
         <CarouselView ItemsSource="{Binding Persons}"
                       IndicatorView="indicatorView"
-                      PositionChanged="CarouselView_PositionChanged">
+                      HorizontalOptions="Center"
+                      VerticalOptions="CenterAndExpand"
+                      HeightRequest="300"
+                      PositionChanged="CarouselView_PositionChanged"
+                      >
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="8"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="MandatorySingle"/>
+            </CarouselView.ItemsLayout>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Frame HasShadow="True"
-                               BorderColor="DarkGray"
-                               CornerRadius="8">
+                    <Frame HasShadow="False"
+                           BorderColor="DarkGray"
+                           CornerRadius="24"
+                           BackgroundColor="{Binding CellBackgroundColor}">
                         <StackLayout>
                             <Label
                                 Text="{Binding Name}"
-                                FontAttributes="Bold"
-                                FontSize="Large" />
+                                FontFamily="UBN"
+                                FontSize="Large"
+                                sharedTransitions:Transition.Name="sharedName"
+                                sharedTransitions:Transition.Group="{Binding Id}"/>
                             <Image Source="{Binding ImageSource}"
                                    Aspect="AspectFit"
-                                   HeightRequest="200"
-                                   WidthRequest="200" />
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
                             <Label
                                 Text="{Binding Details}"
-                                FontAttributes="Italic" />
+                                FontFamily="UBN"
+                                FontSize="Large"
+                                MaxLines="1"
+                                LineBreakMode="TailTruncation"
+                                sharedTransitions:Transition.Name="sharedDetails"
+                                sharedTransitions:Transition.Group="{Binding Id}"/>
+                            <Button Text="go to detail" Clicked="Button_Clicked" Margin="20" FontFamily="UBN"/>
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
@@ -39,6 +56,6 @@
                        Margin="0,0,0,40"
                        IndicatorColor="LightGray"
                        SelectedIndicatorColor="DarkGray" />
-        <Label x:Name="currentPos" FontSize="Body" Text="CurrentPageNo: 1" HorizontalTextAlignment="Center" />
+        <Label x:Name="currentPos" FontFamily="UBN" FontSize="Body" Text="CurrentPageNo: 1" HorizontalTextAlignment="Center" />
     </StackLayout>
 </ContentPage>

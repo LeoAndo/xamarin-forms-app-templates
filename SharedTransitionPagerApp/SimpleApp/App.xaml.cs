@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using Plugin.SharedTransitions;
+using SimpleApp.Pages;
+using Xamarin.Forms;
 
 namespace SimpleApp
 {
@@ -7,13 +9,7 @@ namespace SimpleApp
         public App()
         {
             InitializeComponent();
-
-
-            Color barBackgroundColor = (Device.RuntimePlatform == Device.Android) ? Color.Black : Color.Orange;
-            MainPage = new NavigationPage(new MainPage())
-            {
-                BarBackgroundColor = barBackgroundColor
-            };
+            MainPage = new SplashPage();
         }
         protected override void OnStart()
         {

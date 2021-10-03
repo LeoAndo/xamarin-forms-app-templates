@@ -13,6 +13,8 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Core\" />
@@ -23,6 +25,14 @@
     <None Remove="Images\sample_image3.png" />
     <None Remove="Images\sample_image2.png" />
     <None Remove="Images\sample_image1.png" />
+    <None Remove="Xamarin.Plugin.SharedTransitions" />
+    <None Remove="Images\xamarin_logo.json" />
+    <None Remove="Com.Airbnb.Xamarin.Forms.Lottie" />
+    <None Remove="Pages\" />
+    <None Remove="Images\xamarin_logo2.json" />
+    <None Remove="Fonts\" />
+    <None Remove="Fonts\ubuntu_medium.ttf" />
+    <None Remove="Fonts\reggaeone_regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
@@ -30,10 +40,22 @@
     <Folder Include="Core\ViewModel\" />
     <Folder Include="Models\" />
     <Folder Include="Images\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\sample_image3.png" />
     <EmbeddedResource Include="Images\sample_image2.png" />
     <EmbeddedResource Include="Images\sample_image1.png" />
+    <EmbeddedResource Include="Images\xamarin_logo.json" />
+    <EmbeddedResource Include="Images\xamarin_logo2.json" />
+    <EmbeddedResource Include="Fonts\ubuntu_medium.ttf" />
+    <EmbeddedResource Include="Fonts\reggaeone_regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

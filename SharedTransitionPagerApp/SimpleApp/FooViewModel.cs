@@ -21,23 +21,29 @@ namespace SimpleApp
 
                 new Person
                 {
+                    Id = 1,
                     Name = "Yamada",
-                    Details = "Details...........",
-                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image1.png")
+                    Details = "DetailsAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCC",
+                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image1.png"),
+                    CellBackgroundColor = Color.FromHex("#bbdefb"),
                 },
 
                 new Person
                 {
+                    Id = 2,
                     Name = "Tanaka",
                     Details = "Details...........",
-                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image2.png")
+                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image2.png"),
+                    CellBackgroundColor = Color.FromHex("#c5cae9"),
                 },
 
                 new Person
                 {
+                    Id = 3,
                     Name = "Yoshida",
                     Details = "Details...........",
-                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image3.png")
+                    ImageSource = ImageSource.FromResource("SimpleApp.Images.sample_image3.png"),
+                    CellBackgroundColor = Color.FromHex("#b2dfdb"),
                 },
             };
             Persons = new ObservableCollection<Person>(source);
