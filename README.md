@@ -9,7 +9,7 @@ Visual Studio Community 2019 for Mac
 Version 8.10.7 (build 17)
 ```
 ```
-XCode 12.5
+Xcode 12.5
 ```
 
 # Template 1 (SimpleApp)
