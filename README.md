@@ -8,9 +8,8 @@ templates for xamarin-forms-app
 Visual Studio Community 2019 for Mac
 Version 8.10.7 (build 17)
 ```
-```
-Xcode 12.5
-```
+<img width="175" alt="スクリーンショット 2021-10-06 14 10 16" src="https://user-images.githubusercontent.com/16476224/136144014-96bca191-095b-4249-92ed-4d8a5a60ae30.png">
+
 
 # Template 1 (SimpleApp)
 [Code](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SimpleApp)<br>
