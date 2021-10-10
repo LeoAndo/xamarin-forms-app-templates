@@ -54,6 +54,18 @@ Version 8.10.7 (build 17)
 |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SharedTransitionPagerApp/capture/ios.gif" width=320 /> |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SharedTransitionPagerApp/capture/android.gif" width=320 /> |
 
 
+# Template 4 (SyncfusionApp)
+[Code](https://github.com/LeoAndo/xamarin-forms-app-templates/tree/main/SyncfusionApp)<br>
+- Features
+  - Navigation
+  - Material Components
+  - Lottie Animation
+  - Xamarin.Plugin.SharedTransitions
+
+| ios | android |
+|:---|:---:|
+|<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SyncfusionApp/capture/ios.gif" width=320 /> |<img src="https://github.com/LeoAndo/xamarin-forms-app-templates/blob/main/SyncfusionApp/capture/android.gif" width=320 /> |
+
 # refs
 https://github.com/xamarin/xamarin-forms-book-samples<br>
 https://github.com/xamarin/xamarin-forms-samples<br>
