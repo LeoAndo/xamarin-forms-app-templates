@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    x:Class="SimpleApp.Pages.CardsPage"
+    Visual="Material"
+    Title="Cards">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="cardViewStyle" TargetType="cards:SfCardView">
+                <Setter Property="BorderColor" Value="Gray"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="CornerRadius" Value="20,0,20,0"/>
+                <Setter Property="Opacity" Value="0.92"/>
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="UBN"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="MaxLines" Value="1"/>
+                <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <!-- Cards Area-->
+        <cards:SfCardLayout x:Name="cardLayout" SwipeDirection="Left"
+                            HeightRequest="300" VerticalOptions="CenterAndExpand"
+                            ShowSwipedCard="False">
+            <cards:SfCardView
+                Style="{StaticResource cardViewStyle}" BackgroundColor="#d1c4e9"
+                TabIndex="3">
+                <StackLayout>
+                    <Label Text="Title4" HorizontalOptions="Center"
+                           Style="{StaticResource labelStyle}"/>
+                    <Label Style="{StaticResource labelStyle}"
+                        Text="AAAAAAAAAAAAAABBBBBBBB" Margin="0,20,0,0"/>
+                </StackLayout>
+            </cards:SfCardView>
+            <cards:SfCardView Style="{StaticResource cardViewStyle}"
+                BackgroundColor="#b2dfdb" TabIndex="2">
+                <StackLayout>
+                    <Label Text="Title3" HorizontalOptions="Center"
+                           Style="{StaticResource labelStyle}"/>
+                    <Label Style="{StaticResource labelStyle}"
+                        Text="Hello" Margin="0,20,0,0"/>
+                </StackLayout>
+            </cards:SfCardView>
+            <cards:SfCardView
+                Style="{StaticResource cardViewStyle}"
+                BackgroundColor="#d7ccc8"
+                TabIndex="1">
+                <StackLayout>
+                    <Label Text="Title2" HorizontalOptions="Center"
+                           Style="{StaticResource labelStyle}"/>
+                    <Label Style="{StaticResource labelStyle}"
+                        Text="123" Margin="0,20,0,0"/>
+                </StackLayout>
+            </cards:SfCardView>
+            <cards:SfCardView Style="{StaticResource cardViewStyle}"
+                              BackgroundColor="#ef9a9a"
+                              TabIndex="0">
+                <StackLayout>
+                    <Label Text="Title1" HorizontalOptions="Center"
+                           Style="{StaticResource labelStyle}"/>
+                    <Label Style="{StaticResource labelStyle}"
+                        Text="ABC" Margin="0,20,0,0"/>
+                </StackLayout>
+            </cards:SfCardView>
+        </cards:SfCardLayout>
+    </StackLayout>
+</ContentPage>

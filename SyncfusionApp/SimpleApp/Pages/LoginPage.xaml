@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    x:Class="SimpleApp.Pages.LoginPage"
+    Title="Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="cardViewStyle" TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="ContainerType" Value="Outlined"/>
+                <Setter Property="OutlineCornerRadius" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+        <StackLayout
+            VerticalOptions="CenterAndExpand"
+            Margin="20"
+            x:Name="mainLayout" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+            <inputLayout:SfTextInputLayout
+                HelperText="input your email address"
+                ErrorText="please input your email address."
+                 x:Name="inputLayoutId" Hint="Id" Style="{StaticResource cardViewStyle}">
+                <Entry ReturnType="Next" x:Name="entryId"/>
+            </inputLayout:SfTextInputLayout>
+            <inputLayout:SfTextInputLayout
+                ErrorText="please input your password."
+                x:Name="inputLayoutPassword" Hint="Password" EnablePasswordVisibilityToggle="True"
+                Style="{StaticResource cardViewStyle}" HelperText="8 or more single-byte alphanumeric characters">
+                <Entry ReturnType="Next" x:Name="entryPassword"/>
+            </inputLayout:SfTextInputLayout>
+            <Button x:Name="buttonLogin" Text="LOGIN" IsEnabled="False" Margin="30"/>
+        </StackLayout>
+        <StackLayout x:Name="progressLayout" IsVisible="False"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                     BackgroundColor="Gray" Opacity="0.5">
+            <progressBar:SfCircularProgressBar
+                x:Name="progress" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                SegmentCount="6" IsIndeterminate="False" TrackColor="#ff5722" ProgressColor="#4caf50"/>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

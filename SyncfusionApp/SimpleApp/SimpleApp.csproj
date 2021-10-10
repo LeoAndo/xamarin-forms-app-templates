@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
+    <PackageReference Include="Syncfusion.Licensing" Version="19.3.0.44" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.3.0.44" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="19.3.0.44" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.3.0.44" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Core\" />
+    <None Remove="Core\Converter\" />
+    <None Remove="Core\ViewModel\" />
+    <None Remove="Models\" />
+    <None Remove="Images\" />
+    <None Remove="Xamarin.Plugin.SharedTransitions" />
+    <None Remove="Com.Airbnb.Xamarin.Forms.Lottie" />
+    <None Remove="Pages\" />
+    <None Remove="Fonts\" />
+    <None Remove="Fonts\ubuntu_medium.ttf" />
+    <None Remove="Fonts\reggaeone_regular.ttf" />
+    <None Remove="Syncfusion.Licensing" />
+    <None Remove="Syncfusion.Xamarin.Core" />
+    <None Remove="Syncfusion.Xamarin.Cards" />
+    <None Remove="ViewModels\" />
+    <None Remove="Syncfusion.Xamarin.SfProgressBar" />
+    <None Remove="Syncfusion.Xamarin.SfPopupLayout" />
+    <None Remove="Images\happy-mascot.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Core\Converter\" />
+    <Folder Include="Core\ViewModel\" />
+    <Folder Include="Models\" />
+    <Folder Include="Images\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Fonts\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\ubuntu_medium.ttf" />
+    <EmbeddedResource Include="Fonts\reggaeone_regular.ttf" />
+    <EmbeddedResource Include="Images\happy-mascot.json" />
+  </ItemGroup>
+</Project>

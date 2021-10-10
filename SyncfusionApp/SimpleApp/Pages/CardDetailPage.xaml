@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SimpleApp.Pages.CardDetailPage"
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+    Title="Card Detail"
+    Visual="Material">
+    <StackLayout x:Name="mainLayout" Margin="20,20,20,60">
+        <progressBar:SfStepProgressBar
+                Orientation="Vertical"
+                StepTapped="SfStepProgressBar_StepTapped"
+                ProgressAnimationDuration="1200">
+            <progressBar:StepView x:Name="stepView1" Status="InProgress">
+                <progressBar:StepView.PrimaryFormattedText>
+                    <FormattedString>
+                        <Span Text="Step1" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"/>
+                        <Span Text="&#10;&#009;abcd..." FontSize="Large" TextColor="Black"/>
+                    </FormattedString>
+                </progressBar:StepView.PrimaryFormattedText>
+            </progressBar:StepView>
+
+            <progressBar:StepView x:Name="stepView2">
+                <progressBar:StepView.PrimaryFormattedText>
+                    <FormattedString>
+                        <Span Text="Step2" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"/>
+                        <Span Text="&#10;&#009;abcd..." FontSize="Large" TextColor="Black"/>
+                    </FormattedString>
+                </progressBar:StepView.PrimaryFormattedText>
+            </progressBar:StepView>
+
+            <progressBar:StepView x:Name="stepView3">
+                <progressBar:StepView.PrimaryFormattedText>
+                    <FormattedString>
+                        <Span Text="Step3" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"/>
+                        <Span Text="&#10;&#009;abcd..." FontSize="Large" TextColor="Black"/>
+                    </FormattedString>
+                </progressBar:StepView.PrimaryFormattedText>
+            </progressBar:StepView>
+            <progressBar:StepView x:Name="stepView4">
+                <progressBar:StepView.PrimaryFormattedText>
+                    <FormattedString>
+                        <Span Text="Complete" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"/>
+                    </FormattedString>
+                </progressBar:StepView.PrimaryFormattedText>
+            </progressBar:StepView>
+        </progressBar:SfStepProgressBar>
+        <Button x:Name="buttonStepResetStatus" Text="Reset" FontFamily="UBN" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
