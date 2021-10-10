@@ -60,6 +60,7 @@ Version 8.10.7 (build 17)
   - Navigation
   - Material Components
   - Lottie Animation
+  - Syncfusion
   - Xamarin.Plugin.SharedTransitions
 
 | ios | android |
